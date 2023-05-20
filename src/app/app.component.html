@@ -1,0 +1,7 @@
+<app-navbar></app-navbar>
+<div class="contanier">
+  <app-formulario (seleccion)="ObtenerRuta($event)"></app-formulario>
+  <app-listado-vuelos [listVuelos]="listVuelos"></app-listado-vuelos>
+  <app-calcular></app-calcular>
+  <app-convertidor [listMoneda]="listMoneda"></app-convertidor>
+</div>  

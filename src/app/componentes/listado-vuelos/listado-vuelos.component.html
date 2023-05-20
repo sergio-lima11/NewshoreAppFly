@@ -1,0 +1,13 @@
+<div class="card-body">
+    <h4 class="card-title">Listado de Vuelos</h4>
+    <div *ngFor="let vuelos of listVuelos" class="card-header">
+      <div class="card-body">
+        <span>DepartureStation : {{vuelos.departureStation}}</span>
+        <p>ArrivalStation : {{vuelos.arrivalStation}} <p>
+        <p>FlightCarrier : {{vuelos.flightCarrier}} </p>
+        <p>Numero de Vuelo : {{vuelos.flightNumber}} </p>
+        <p>Precio : {{vuelos.price}}  USD</p>
+      </div>
+    </div>
+    
+    <div>

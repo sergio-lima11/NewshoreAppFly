@@ -1,0 +1,48 @@
+<div class="list-group">
+  <form [formGroup]="forma"(ngSubmit)="ObtenerRuta()"> 
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">Calculador de Rutas</h5>
+        <div class="form-group">
+            <label for="exampleInputEmail1" class="form-label mt-4">Origen</label>
+            <input type="text" class="form-control" [ngModel]="Origin" (ngModelChange)="Origin=$event.toUpperCase()"formControlName="origen" [class.is-invalid]="origenNoValido">
+            <small *ngIf="origenNoValido" class="text-advert">Solo digite 3 caracteres</small>
+            <div></div>
+
+            <label for="exampleInputEmail1" class="form-label mt-4">Destino</label>
+            <input type="text" class="form-control" [ngModel]="Destini" (ngModelChange)="Destini=$event.toUpperCase()" formControlName="destino" [class.is-invalid]="destinoNoValido" >
+            <small *ngIf="destinoNoValido" class="text-advert">Solo digite 3 caracteres</small>
+          
+
+
+          </div>
+        <small class="text-muted"></small>
+        <div class="form-group">
+            <label for="exampleSelect" class="form-mone">Formato de Moneda : </label>
+            
+            <select>
+              <option>COP Pesos Colombianos</option>
+              <option>EUR Euros</option>
+              <option>CNY Yen</option>
+              <option>BTY Bitcoin</option>
+              
+            </select>
+
+            <button type="button" class="btn btn-outline-info"(click)="Moneda()">Convertir</button>
+       
+        <div>
+            <div>
+                <button type="submit" class="btn btn-outline-success"(click)="ObtenerRuta()">Obtener Ruta</button>
+                <button type="button" class="btn btn-primary"(click)="limpiar()">Limpiar</button>
+                <button type="button" class="btn btn-outline-secondary"(click)="ObtenerRuta()">Listado de Vuelos</button>
+          
+            </div>
+        </div>
+    </div>
+
+      </div>
+      
+  
+    </a>
+  </form>
+</div>
